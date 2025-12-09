@@ -1,12 +1,12 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
     <title>MESTRE</title>
+
 </head>
 <body>
     <!-- Secció principal, presentació per l'scroll -->
@@ -60,47 +60,135 @@
         </div>
     </div>
 
-    <!-- Sección  artícles -->
+    <!-- Sección artícles am Swiper -->
     <section class="section-articles">
         <div class="section-header">
             <h2>Reflexions Contemporànies</h2>
             <p>Anàlisis de la condició humana a través de l'art i la cultura</p>
         </div>
         
-        <div class="articles-container">
-            <article class="article-card">
-                <div class="article-image">
-                    <img src="assets/imgs/Stańczyk.jpg" alt="Pagliacci i Stańczyk">
+        <!-- Contenidor del Swiper -->
+        <div class="swiper articles-swiper">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="assets/imgs/Stańczyk.jpg" alt="Pagliacci i Stańczyk">
+                        </div>
+                        <div class="article-content">
+                            <h3>Pagliacci i Stańczyk: els pallassos que riuen mentre el món s'enfonsa</h3>
+                            <p>Pagliacci i Stańczyk revelen la tragèdia dels que fan riure: un dolor invisible que la societat ignora. Mostren com el món prefereix l'espectacle a la veritat, ignorant el desastre i el sofriment.</p>
+                            <a href="stanczyk.html" class="read-more">Llegir més</a>
+                        </div>
+                    </article>
                 </div>
-                <div class="article-content">
-                    <h3>Pagliacci i Stańczyk: els pallassos que riuen mentre el món s'enfonsa</h3>
-                    <p>Pagliacci i Stańczyk revelen la tragèdia dels que fan riure: un dolor invisible que la societat ignora. Mostren com el món prefereix l'espectacle a la veritat, ignorant el desastre i el sofriment.</p>
-                    <a href="stanczyk.html" class="read-more">Llegir més</a>
+                
+                
+                <div class="swiper-slide">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="assets/imgs/devilman.jpg" alt="Devilman Crybaby">
+                        </div>
+                        <div class="article-content">
+                            <h3>El caos revela l'ésser humà: odi, por i espectacle</h3>
+                            <p>Devilman Crybaby mostra que quan el caos domina, l'ésser humà revela el seu pitjor: odi, violència i gaudi del sofriment aliè. La societat no busca raó ni empatia, només espectacle i supervivència a costa dels altres.</p>
+                            <a href="#" class="read-more">Llegir més</a>
+                        </div>
+                    </article>
                 </div>
-            </article>
+                
+                
+                <div class="swiper-slide">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="assets/imgs/gantz2.jpg" alt="Gantz">
+                        </div>
+                        <div class="article-content">
+                            <h3>Gantz: La crueltat com a espectacle de masses</h3>
+                            <p>En el món de Gantz, la violència es converteix en entreteniment i la mort en moneda de canvi. Una reflexió sobre com la societat moderna consumeix el sofriment aliè mentre ignora la seva pròpia humanitat.</p>
+                            <a href="#" class="read-more">Llegir més</a>
+                        </div>
+                    </article>
+                </div>
+                
+                
+                <div class="swiper-slide">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="/assets/imgs/ricardio.jpg" alt="Reflexión adicional">
+                        </div>
+                        <div class="article-content">
+                            <h3>L’Ànima Oculta d’Hora d’Aventuras, per Ray Montero</h3>
+                            <p>En aquesta sèrie s’exploren profundament els aspectes psicològics dels personatges, així com l’evolució de la trama al llarg de les temporades.</p>
+                            <a href="#" class="read-more">Llegir més</a>
+                        </div>
+                    </article>
+                </div>
+                
+            </div>
             
-            <article class="article-card">
-                <div class="article-image">
-                    <img src="assets/imgs/devilman.jpg" alt="Devilman Crybaby">
-                </div>
-                <div class="article-content">
-                    <h3>El caos revela l'ésser humà: odi, por i espectacle</h3>
-                    <p>Devilman Crybaby mostra que quan el caos domina, l'ésser humà revela el seu pitjor: odi, violència i gaudi del sofriment aliè. La societat no busca raó ni empatia, només espectacle i supervivència a costa dels altres.</p>
-                    <a href="#" class="read-more">Llegir més</a>
-                </div>
-            </article>
+            <!-- Botons swiper -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
             
-            <article class="article-card">
-                <div class="article-image">
-                    <img src="assets/imgs/gantz2.jpg" alt="Gantz">
-                </div>
-                <div class="article-content">
-                    <h3>Gantz: La crueltat com a espectacle de masses</h3>
-                    <p>En el món de Gantz, la violència es converteix en entreteniment i la mort en moneda de canvi. Una reflexió sobre com la societat moderna consumeix el sofriment aliè mentre ignora la seva pròpia humanitat.</p>
-                    <a href="#" class="read-more">Llegir més</a>
-                </div>
-            </article>
+            <!-- paginació swipper -->
+            <div class="swiper-pagination"></div>
         </div>
     </section>
+
+    <!-- Script del Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // inicialització del Swiper
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.articles-swiper', {
+                // Configuración básica
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                
+                // Efecte de transición
+                effect: 'slide',
+                
+                // Paginació
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                
+                // Navegació
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                
+                // Responsive breakpoints
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                },
+                
+                // velocitat de transición
+                speed: 300,
+                
+                
+                // autoplay: {
+                //     delay: 3000,
+                //     disableOnInteraction: false,
+                // },
+            });
+        });
+    </script>
 </body>
 </html>
